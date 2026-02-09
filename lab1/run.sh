@@ -1,9 +1,8 @@
-
 #!/bin/bash
 
 # ##################
+# source ./data/s38584_cadence_env/design_env.sh
 source ./data/actual_env.sh
-
 # ##################
 
 help_info() {
@@ -14,7 +13,7 @@ NC='\033[0m' # No Color
 echo -e "
 ${YELLOW}
 
-$(cat Readme)
+$(cat ReadMe)
 
 ${NC}
 "
@@ -95,10 +94,56 @@ do
         run_dir="./implementation/genus.syn${suffix}"
         mkdir -p ${run_dir}
         cd ${run_dir}
-        genus -files ../../genus.syn.tcl
+        genus -files ../../../flow_scripts/genus.syn.tcl
         incase=1 
         ;;    
-        *)          
+    -innovus)  
+        
+        if [ "$2" = "-suffix" ] || [ "$2" = "-s" ]; then
+            process_suffix "$2" "$3"
+            shift 2
+        else
+            
+            suffix=".$default_date"
+        fi
+        run_dir="./implementation/innovus.empty${suffix}"
+        mkdir -p ${run_dir}
+        cd ${run_dir}
+        innovus -stylus -overwrite
+        incase=1 
+        ;;
+    -innovus.fp)  
+        
+        if [ "$2" = "-suffix" ] || [ "$2" = "-s" ]; then
+            process_suffix "$2" "$3"
+            shift 2
+        else
+            
+            suffix=".$default_date"
+        fi
+        run_dir="./implementation/innovus.fp${suffix}"
+        mkdir -p ${run_dir}
+        cd ${run_dir}
+        innovus -stylus -overwrite -files ../../../flow_scripts/innovus.fp.tcl
+        incase=1 
+        ;;
+    -innovus.impl)  
+        
+        if [ "$2" = "-suffix" ] || [ "$2" = "-s" ]; then
+            process_suffix "$2" "$3"
+            shift 2
+        else
+            
+            suffix=".$default_date"
+        fi
+        run_dir="./implementation/innovus.impl${suffix}"
+        rm -r $run_dir      
+        mkdir -p ${run_dir}
+        cd ${run_dir}
+        innovus -stylus -overwrite -files ../../../flow_scripts/innovus.impl.tcl
+        incase=1 
+        ;;
+       *)          
         echo "Error: Unknown option '$1'"
         help_info
         exit 1
