@@ -1,0 +1,83 @@
+################################################
+PREPARING DESIGN ENVIRONMENT
+################################################
+
+Before running Genus or Innovus, prepare the design environment variables.
+
+For example, assume you have the directory:
+./data/example
+
+The environment directory consists of:
+
+- floorplan/        (floorplan data for Innovus)
+- rtl/              (optional; *.lst is required, another directory may be used)
+- sdc/              (constraints)
+- mmmc.view         (timing analysis configuration)
+- env.sh     (environment setup file)
+
+################################################
+GENUS FAST RUN EXAMPLE
+################################################
+
+1) Open env.sh and set the following variables:
+
+- ENV_DIR
+- ENV_DESIGN
+- ENV_LEF_FILES
+- ENV_MMMC
+- ENV_RTL_LIST
+- ENV_INIT_HDL_SEARCH_PATH
+
+2) Open mmmc.view and configure the following sections:
+
+- lib_list_<your corners>
+- create_rc_corner
+- create_library_set
+- create_opcond
+- create_timing_condition
+- create_delay_corner
+- create_constraint_mode
+- create_analysis_view
+- set_analysis_view
+
+3) Open actual_env.sh and add the following line at the beginning of the file:
+
+source source ./example/env.sh
+
+(the design environment you want to launch)
+
+4) Open a terminal and add the Genus license.
+
+5) Run synthesis:
+
+./run.sh -genus.syn
+
+-- Synthesis has been launched successfully.
+
+################################################
+COMMON COMMANDS
+################################################
+
+Open terminal and load Cadence tools:
+
+module load cadence/GENUS/21.14
+module load cadence/INNOVUS/21.14
+module load cadence/CONFRML/22.10.100
+module load cadence/MODUS/19.10.000
+
+Run flows:
+
+./run.sh -genus.syn        (simple Genus run)
+./run.sh -innovus.fp       (create floorplan)
+./run.sh -innovus.impl     (simple Innovus run)
+
+
+################################################
+RUN SUFFIX (OPTIONAL)
+################################################
+
+You can add a suffix to distinguish run directories.
+
+Example:
+
+./run.sh -genus.syn -suffix test1
