@@ -1,0 +1,9 @@
+/home/p.kuzmin/labs_digital_flow/lab2/data/Async_FIFO/rtl/top_fifo.sv
+/home/p.kuzmin/labs_digital_flow/lab2/data/Async_FIFO/rtl/async_fifo.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/Async_FIFO/rtl/fifomem.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/Async_FIFO/rtl/fifomem_dp.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/Async_FIFO/rtl/rptr_empty.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/Async_FIFO/rtl/sync_ptr.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/Async_FIFO/rtl/sync_r2w.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/Async_FIFO/rtl/sync_w2r.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/Async_FIFO/rtl/wptr_full.v

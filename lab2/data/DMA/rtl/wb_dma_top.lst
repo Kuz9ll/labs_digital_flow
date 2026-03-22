@@ -1,0 +1,13 @@
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_top.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_defines.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_wb_if.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_wb_slv.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_wb_mast.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_rf.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_pri_enc_sub.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_inc30r.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_de.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_ch_sel.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_ch_rf.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_ch_pri_enc.v
+/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/rtl/wb_dma_ch_arb.v

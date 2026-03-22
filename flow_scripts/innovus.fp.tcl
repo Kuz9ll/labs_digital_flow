@@ -56,11 +56,10 @@ create_floorplan -stdcell_density_size 1 $density
 
 
 
-
     # proc_create_floorplan_init 0.5 Mela5 Melal6
 
 
-    write_floorplan ../../data/example/floorplan/[get_db current_design .name].fp
+    write_floorplan ../../data/AsyncFIFO/floorplan/[get_db current_design .name].fp
 
     write_floorplan "../../data/floorplan/my_floorplan.fp"
 

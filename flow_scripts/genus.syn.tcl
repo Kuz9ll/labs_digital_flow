@@ -52,9 +52,10 @@ set rtlList     $::env(ENV_RTL_LIST)
 
 
 puts "Reading RTL..."
-foreach file $rtlList {
-    read_hdl -define $::env(ENV_DEFINE) -language sv -f $file
-}
+
+# read_hdl -define $::env(ENV_DEFINE) -language sv -f $::env(ENV_RTL_LIST)
+read_hdl -define $::env(ENV_DEFINE) -language v2001 -f $rtlList
+
 # suspend
 read_mmmc $::env(ENV_MMMC)
 
@@ -82,12 +83,13 @@ proc user_reports {} {
 
     file mkdir ${run_dir}/${STAGE}/reports
 
-    report_timing              > ${run_dir}/${STAGE}/reports/report_timing.rpt
-    report_timing_summary      > ${run_dir}/${STAGE}/reports/report_timing_summary.rpt
-    report_area                > ${run_dir}/${STAGE}/reports/report_area.rpt
-    report_power               > ${run_dir}/${STAGE}/reports/report_power.rpt
-    report_qor                 > ${run_dir}/${STAGE}/reports/report_qor.rpt
-    report_hierarchy           > ${run_dir}/${STAGE}/reports/report_hierarchy.rpt
+    report_timing                > ${run_dir}/${STAGE}/reports/report_timing.rpt
+    report_timing_summary        > ${run_dir}/${STAGE}/reports/report_timing_summary.rpt
+    report_area                  > ${run_dir}/${STAGE}/reports/report_area.rpt
+    report_power                 > ${run_dir}/${STAGE}/reports/report_power.rpt
+    report_qor                   > ${run_dir}/${STAGE}/reports/report_qor.rpt
+    report_hierarchy             > ${run_dir}/${STAGE}/reports/report_hierarchy.rpt
+    check_timing_intent -verbose > ${run_dir}/${STAGE}/reports/check_timing_intent.rpt 
 }
 
 proc user_out {} {
