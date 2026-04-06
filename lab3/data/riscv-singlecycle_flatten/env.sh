@@ -9,12 +9,12 @@
 #                                       
 ##############################################################                                
 
-export ENV_DIR="/home/p.kuzmin/labs_digital_flow/lab2/data/DMA/"
+export ENV_DIR="$(pwd)/data/riscv-singlecycle_flatten/"
 export PROJECT="${ENV_DIR}rtl/"
 export ENV_FLOW_SCRIPTS="${ENV_DIR}../../../flow_scripts/"
 
 
-export ENV_DESIGN="wb_dma_top"
+export ENV_DESIGN="riscv_core"
 
 
 export ENV_LEF_FILES=" 
@@ -34,9 +34,9 @@ export ENV_MMMC="${ENV_DIR}mmmc.view"
 #
 ##############################################################                                
 
-export ENV_RTL_LIST="${PROJECT}wb_dma_top.lst"
+export ENV_RTL_LIST="${PROJECT}singlecycle_flat.list"
 
-export ENV_INIT_HDL_SEARCH_PATH="" 
+export ENV_INIT_HDL_SEARCH_PATH="${PROJECT} ${PROJECT}common/ ${PROJECT}singlecycle/" 
 export ENV_DEFINE=""
 
 

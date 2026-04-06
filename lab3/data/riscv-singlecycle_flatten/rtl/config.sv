@@ -28,7 +28,7 @@
 `define DATA_WIDTH      2**`DATA_BITS
 `define DATA_END        `DATA_BEGIN + `DATA_WIDTH - 1
 
-`define TEXT_HEX        "add.text.vh"
-`define DATA_HEX        "add.data.vh"
+// `define TEXT_HEX        "add.text.vh"
+// `define DATA_HEX        "add.data.vh"
 
 `endif

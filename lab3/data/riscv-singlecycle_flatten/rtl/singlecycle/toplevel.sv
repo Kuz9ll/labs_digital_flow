@@ -3,8 +3,8 @@
 // (c) 2017-2019, Arthur Matos, Marcus Vinicius Lamar, Universidade de Brasília,
 //                Marek Materzok, University of Wrocław
 
-`include "config.sv"
-`include "constants.sv"
+// `include "config.sv"
+// `include "constants.sv"
 
 module toplevel (
     input  clock,
